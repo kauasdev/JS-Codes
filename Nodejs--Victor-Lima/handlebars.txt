@@ -1,0 +1,5 @@
+Handlebars é uma template engine, ele adiciona algumas
+funcionalidades ao html
+
+npm install express-handlebars --> intala uma versão específica do handlebars
+para o express

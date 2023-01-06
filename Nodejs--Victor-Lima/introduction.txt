@@ -1,0 +1,7 @@
+Node é um ambiente de execução JavaScript que não depende de um 
+Browser.
+
+O Node é baseado no interpretador V8 da Google e na Libuv.
+
+Tem um dos maiores ecossitemas de módulos, bibliotecas e plug-ins o NPM
+(Node Package Manage).

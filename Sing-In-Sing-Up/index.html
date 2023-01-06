@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF'8"/>
+	<meta name="vieeport" content="width=device-width, initial-scale=1.0" >
+	<link rel="stylesheet" href="./style.css">
+	<title>Sing in or Sing up</title>
+</head>
+<body>
+	<div class="container">
+		<img src="https://images.pexels.com/photos/6456137/pexels-photo-6456137.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Join Us" id="joinImg">
+		<div class="user singupBox">
+			<h1>Create an account</h1>
+			<div class="redesSociais">
+				<div>
+					<a href="#" class="google" >
+						<ion-icon name="logo-google"></ion-icon>
+						<p>Sing up with <strong>Google</strong></p>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="facebook">
+						<ion-icon name="logo-facebook"></ion-icon>
+						<p>Sing up with <strong>Facebook</strong></p>
+					</a>
+				</div>
+			</div>
+			<fieldset>
+				<legend><span>Or</span></legend>
+				<form class="singupForm">
+					<input type="text" id="singup__userName" placeholder="Username" required>
+					<input type="email" id="singup__userEmail" placeholder="Email" required>
+					<input type="password" id="singup__password" placeholder="Password" required>
+					<input type="password" id="singup__passwordConfirm" placeholder="Confirm password" required>
+					<button type="submit" >Sing Up</button>
+				</form>
+			</fieldset>
+			<p>Already have an account? <a href="#" onclick="toggleBox()">Sing In</a></p>
+		</div><!--SingUp Box-->
+		<img src="https://images.pexels.com/photos/5840867/pexels-photo-5840867.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Welcome Back" id="welcomeImg">
+		<div class="user singinBox">
+			<h1>Sing In</h1>
+			<div class="redesSociais">
+				<div>
+					<a href="#" class="google" >
+						<ion-icon name="logo-google"></ion-icon>
+						<p>Sing in with <strong>Google</strong></p>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="facebook">
+						<ion-icon name="logo-facebook"></ion-icon>
+						<p>Sing in with <strong>Facebook</strong></p>
+					</a>
+				</div>
+			</div>
+			<fieldset>
+				<legend><span>Or</span></legend>
+				<form class="singinForm">
+					<div>
+				<!--	<label>Username <span>(Required)</span></label>-->
+						<input type="text" id="singIn__userEmail" placeholder="Email">
+						<div id="singIn__noEmail"><p>Email obrigatório</p></div>
+						<div id="singIn__errorEmail"><p>Email inválido</p></div>
+					</div>
+					<div>
+				<!--	<label>Password <span>(Required)</span></label>-->
+						<input type="password" id="singIn__password" placeholder="Password">
+						<div id="singIn__noPass"><p>Senha obrigatória</p></div>
+					</div>
+					<button type="submit" onclick="valitedSingInFields()">Sing In</button>
+				</form>
+			</fieldset>
+			<p>Don't have an account? <a href="#" onclick="toggleBox()">Sing up</a></p>
+		</div>
+	</div>
+<script type="text/javascript" src="./script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

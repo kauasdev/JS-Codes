@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "kaualima06",
+    "password": "2929",
+    "database": "rentx",
+    "entities": ["./src/modules/**/entities/*.ts"],
+    "migrations": ["./src/database/migration/*.ts"],
+    "cli": {
+        "migrationsDir": "src/database/migration"
+    }
+}

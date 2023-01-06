@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+	padding:0;
+	margin:0;
+	outline:none;
+	box-sizing:border-box;
+	font-family:'Poppins', sans-serif;
+}
+:root {
+	--purple: #6A5ADF;
+	--pink: #E78DD2;
+	--beje: #DFB59C;
+	--white1: #F4F2FD;
+	--white2: #FEFEFE;
+	--blue: #557085;
+}
+body {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+/*	background-image:linear-gradient(45deg, var(--pink), var(--purple));*/
+	background-color:var(--blue);
+	padding:0 10px;
+}
+.container {
+	display:flex;
+	position:relative;
+	min-width:800px;
+	height:500px;
+	background-color:var(--white2);
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+	overflow:hidden;
+	transition:0.5s;
+}
+.container img {
+	display:block;
+	width:50%;
+	height:100%;
+	position:absolute;
+}
+.container .user{
+	display:flex;
+	flex-direction:column;
+	position:absolute;
+	top:0;
+	flex-direction:column;
+	height:100%;
+	justify-content:center;
+	align-items:center;
+	padding:10px;
+	background-color:var(--white2);
+	transition:0.5s;
+}
+.container .user h1{
+	font-size:1.8em;
+	color:rgba(0,0,0,0.7);
+	text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
+.container .user .redesSociais {
+	display:flex;
+	width:100%;
+	height:40px;
+	margin:15px 0;
+}
+.container .user .redesSociais div{
+	display:flex;
+	height:100%;
+	width:50%;
+	margin:0 5px;
+	cursor:pointer;
+}
+.container .user .redesSociais div a{
+	display:flex;
+	width:100%;
+	height:100%;
+	justify-content:space-evenly;
+	align-items:center;
+	color:#fff;
+	text-decoration:none;
+	font-size:0.8em;
+}
+.container .user .redesSociais div .facebook {
+	background-color:#3b5998;
+}
+.container .user .redesSociais div .google {
+	background-color:#db4a39;
+}
+.container .user fieldset {
+	display:flex;
+	flex-direction:column;
+	border-top:2px solid rgba(208,208,208,0.6);
+	border-right:none;
+	border-left:none;
+	border-bottom:none;
+	padding:10px 0 0 0;
+	width:100%;
+        text-align: center;
+}
+.container .user fieldset span {
+	border:2px solid rgba(208,208,208,0.6);
+	padding:4px 5px;
+	border-radius:50%;
+	margin: 0 auto;
+}
+.container .user fieldset form input {
+	width:100%;
+	height:35px;
+	margin:5px 0;
+	background-color:#f5f5f5;
+	border:none;
+	padding:5px;
+	border-radius:3px;
+	cursor:text;
+}
+.container .user fieldset form button {
+	display:flex;
+	min-width:100px;
+	height:30px;
+	background-color:var(--purple);
+	border:none;
+	color:#fff;
+	font-weight:bold;
+	justify-content:center;
+	align-items:center;
+	margin:10px 0;
+	cursor:pointer;
+}
+.container .user p {
+	text-align:justify;
+	font-size:0.8em;
+	text-transform:uppercase;
+}
+.container .user p a{
+	text-decoration:none;
+	color:var(--purple);
+	font-weight:bold;
+}
+.container .user form div div {
+	display:none;
+	color:crimson;
+	font-weight:bold;
+	text-align:left;
+}
+.container .singinBox {
+	top:100%;
+	right:0;
+	transition:0.5s;
+}
+.container.active .singinBox{
+	top:0;
+	right:0;
+	transition:0.5s;
+}
+.container.active .singinBox .redesSociais {
+	margin:25px 0;
+}
+.container.active .singinBox fieldset form input {
+	height:40px;
+	margin:10px 0;
+}
+.container.active .singinBox fieldset form button {
+	margin:15px 0;
+}
+.container .singupBox{
+	top:0;
+	left:0;
+	transition:0.5s;
+}
+.container.active .singupBox{
+	top:-100%;
+	left:0;
+	transition:0.5s;
+}
+.container.active #joinImg{
+	top:100%;
+	right:0;
+	transition:0.5s;
+}
+.container #joinImg{
+	top:0;
+	right:0;
+	transition:0.5s;
+}
+.container #welcomeImg{ 
+	top:100%;
+	left:0;
+	transition:0.5s;
+}
+.container.active #welcomeImg{ 
+	top:0;
+	left:0;
+	transition:0.5s;
+}
+@media (min-width: 360px){
+	.container {
+		min-width:400px;
+		height:450px;
+	}
+	.singupBox , .singinBox {
+		width:100%;
+		margin: 0 auto;
+	}
+	#joinImg , #welcomeImg {
+		display:none;
+	}
+}
+@media (min-width: 590px){
+	.container{
+		min-width:700px;
+	}
+	.container .user {
+		max-width:50%;
+		margin: 0 auto;
+	}
+	#joinImg , #welcomeImg {
+		display:flex;
+	}
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../style/chat.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/chat.js" defer></script>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="container__header">
+            <div id="image__div">
+                <!--Nessa div ficará uma img que será a logo-->
+                <ion-icon name="chatbubbles-outline"></ion-icon>            
+            </div>
+            <div id="menu__div">
+                <nav class="menu__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="/profile"><button id="profile" value="<%= userId %>">Profile</button></a></li>
+                        <li class="nav__item"><a href="/settings"><button>Settings</button></a></li>
+                        <li class="nav__item"><a href="/faq"><button>FAQ</button></a></li>
+                        <li class="nav__item"><a href="/terms-of-use"><button>Terms of Use</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="notifications__div">
+                <ion-icon name="notifications-outline"></ion-icon>            
+            </div>
+        </header>
+        <div class="addContactForm">
+            <div id="contactDiv">
+                <h2>Add Contact</h2>
+                <form id="addContactForm">
+                    <input type="text" name="nameCont" id="nameContact" placeholder="Insert Contact Name">
+                    <input type="text" name="idCont" id="idContact" placeholder="Insert Contact Id">
+                    <button type="submit" class="sendForm">Add</button>
+                </form>
+            </div>
+            <div id="groupDiv">
+                <h2>Add Group</h2>
+                <form id="addGroupForm" action="/" method="post">
+                    <input type="text" name="nameGroup" id="nameGroup" placeholder="Insert Group Name">
+                    <div>
+                        <p>Members</p>
+                        <button type="button" id="addMembersBttn"><ion-icon name="add"></ion-icon></button>
+                    </div>
+                    <button type="submit" class="sendForm">Add</button>
+                </form>
+            </div>
+        </div>
+        <div class="membersToAddInChat">
+            <ul id="membersToAddList">
+                
+            </ul>
+            <button id="membersInChatBttn">Ok</button>
+        </div>
+        <main class="container__main">
+            <div class="contacts">
+                <input type="search" name="search__input" id="search__input" placeholder="Search">
+                <ul class="contacts__list">
+                    
+                </ul>
+                <div class="addContacts">
+                    <div class="selectToAdd">
+                        <button id="selectToAdd__contact" value="contact">Contact</button>
+                        <button id="selectToAdd__group" value="group">Group</button>
+                    </div>
+                    <button class="addContacts__button">
+                        <ion-icon name="add" id="openFormIcon"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="main__message">
+                <img src="./images/Texting-rafiki.svg" alt="image" id="chatImg">
+                <a href="https://storyset.com/social-media" id="storySetLink">Social media illustrations by Storyset</a>
+                <div class="message__buttons">
+                    <h2 id="nameContactH2">Bill</h2>
+                    <div>
+                        <button class="message__clear">Clear Chat</button>
+                        <button class="message__more">More</button>
+                        <a href="/chat"><button class="closeChat"><ion-icon name="close"></ion-icon></button></a>
+                    </div>
+                </div>
+                <div class="chat">
+                    
+                </div>
+                <div class="chat__sendMessage">
+                    <form id="sendMessage__form">
+                        <input type="text" name="message" class="sendMessage__input">
+                        <button type="submit"><ion-icon name="send-outline"></ion-icon></button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
